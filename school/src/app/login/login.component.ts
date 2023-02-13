@@ -10,7 +10,7 @@ export class LoginComponent {
 
 @Input() user_label:string = ""
 
-@Input() password_label= ""
+@Input() password_label = ""
 @Output() emitter = new EventEmitter()
 
 submit(formdata:any){

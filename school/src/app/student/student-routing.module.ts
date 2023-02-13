@@ -6,14 +6,17 @@ import { StudentLoginComponent } from './student-login/student-login.component';
 import { StudentComponent } from './student.component';
 
 const routes: Routes = [
-  { path: 'student', component: StudentComponent,children:[
-    {path: '',component:StudentDashboardComponent},
-    {path:'student-dashboard',component:StudentDashboardComponent},
-    {path:'student-login',component:StudentLoginComponent},
-    {path:'leave-request',component:LeaveRequestComponent},
-    
-  
-  ]},
+  { path: '', redirectTo: 'student-dashboard', pathMatch: 'full' },
+  {
+    path: 'dashboard', component: StudentComponent, children: [
+      { path: '', component: StudentDashboardComponent }, 
+      { path: 'leave', component: LeaveRequestComponent },
+      // { path: 'students', component: StudentsComponent },
+      // { path: 'attendance', component: AttendanceComponent },
+      // { path: 'view-attendance', component: ViewAttendanceComponent },
+      // { path: 'add-teacher', component: AddTeacherComponent },
+    ]
+  },
 
 ];
 

@@ -1,16 +1,26 @@
-<div class="container">
+<app-navbar></app-navbar>
+<div class="center">
     <h1>{{user_type}}</h1>
     <form #myform="ngForm" (ngSubmit)="submit(myform.value)">
-        <div class="details">
-            <label for="username">{{user_label}}:</label><br>
-            <input type="text" name="username" id="" ngModel><br>
-        </div><br>
-        <div class="details">
-            <label for="password">{{password_label}}</label><br>
-            <input type="text" name="password" id="" ngModel><br>
-        </div><br>
-        <div class="details">
-            <button class="btn btn-success">Login</button>
+        <div class="txt_field">
+          
+            <input type="text" name="username" value="" required ngModel #username="ngModel">
+            <span></span>
+            <label for="">{{user_label}}</label>
+            
         </div>
+        
+        <div class="txt_field">
+            <input type="password" name="password" value="" required ngModel #password="ngModel">
+            <span></span>
+            <label for="">{{password_label}}</label>
+        </div>
+        <!-- <div class="details">
+            <button class="btn btn-success">Login</button>
+        </div> -->
+        <div class="pass">Forgot Password?</div>
+        <button><a [routerLink]=""> Login</a></button><br><br>
+        <div class="new">Don't have an account?<a href="">Register Now</a></div>
+        
     </form>
 </div>

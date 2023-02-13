@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./tlogin.component.css']
 })
 export class TloginComponent {
-
+  router: any;
+  data_received(formdata:any){
+    console.log(formdata)
+    this.router.navigateByUrl("/teacher");
+    
+  }
 }

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-login.component.css']
 })
 export class StudentLoginComponent {
-  data_received(formdata:any){
-    console.log(formdata)
-  }
+  // data_received(formdata:any){
+  //   console.log(formdata)
+  // }
 }

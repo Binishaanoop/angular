@@ -10,20 +10,33 @@ import { TeachersComponent } from './teachers/teachers.component';
 import { ViewAttendanceComponent } from './view-attendance/view-attendance.component';
 
 const routes: Routes = [
-  {path: 'admin', component:AdminComponent,children:[
-    {path:'',component:AdminDashboardComponent},
-    {path:'admin-dashboard',component:AdminDashboardComponent},
-    {path: 'admin-notice', component:AdminNoticeComponent},
-    {path: 'teachers', component:TeachersComponent},
-    {path: 'students', component:StudentsComponent},
-    {path: 'attendance', component:AttendanceComponent},
-    {path: 'view-attendance', component:ViewAttendanceComponent},
-    {path: 'add-teacher', component:AddTeacherComponent},
-    
+  // {path: '', component:AdminComponent,children:[
+  //   {path:'', redirectTo:'admin-dashboard'},
+  //   {path:'admin-dashboard',component:AdminDashboardComponent},
+  //   {path: 'admin-notice', component:AdminNoticeComponent},
+  //   {path: 'teachers', component:TeachersComponent},
+  //   {path: 'students', component:StudentsComponent},
+  //   {path: 'attendance', component:AttendanceComponent},
+  //   {path: 'view-attendance', component:ViewAttendanceComponent},
+  //   {path: 'add-teacher', component:AddTeacherComponent},
 
 
 
-  ]},
+
+  // ]},
+  { path: '', redirectTo: 'admin-dashboard', pathMatch: 'full' },
+  {
+    path: 'dashboard', component: AdminComponent, children: [
+      { path: '', component: AdminDashboardComponent },
+      { path: 'teachers', component: TeachersComponent },
+      { path: 'students', component: StudentsComponent },
+      { path: 'attendance', component: AttendanceComponent },
+      { path: 'view-attendance', component: ViewAttendanceComponent },
+      { path: 'addteacher', component: AddTeacherComponent },
+    ]
+  },
+
+
 
 ];
 

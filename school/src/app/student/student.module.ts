@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppModule } from '../app.module';
 import { LeaveRequestComponent } from './leave-request/leave-request.component';
+import { LoginComponent } from '../login/login.component';
 
 
 @NgModule({
@@ -17,14 +18,18 @@ import { LeaveRequestComponent } from './leave-request/leave-request.component';
     StudentComponent,
     StudentLoginComponent,
     StudentDashboardComponent,
-    LeaveRequestComponent
+    LeaveRequestComponent,
+ 
+   
   ],
   imports: [
     CommonModule,
     StudentRoutingModule,
     RouterModule,
     FormsModule,
-    AppModule
+    
+    
+    
     
   ]
 })

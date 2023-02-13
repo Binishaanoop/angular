@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./slogin.component.css']
 })
 export class SloginComponent {
+   router: any;
+   data_received(formdata:any){
+    console.log(formdata)
+    this.router.navigateByUrl("/student");
 
+  }
 }
