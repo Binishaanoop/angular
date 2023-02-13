@@ -1,0 +1,17 @@
+.container{
+    position: absolute;
+    right: 10%;
+    width: 58vw;
+   /* height: auto; */
+    
+    /* background: white; */
+    margin-top: 1%;
+    /* background: green; */
+}
+
+.container .content {
+    position: relative;
+    margin-top: 10vh;
+    /* min-height: 90vh; */
+    /* background: #f1f1f1; */
+}

@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>{{user_type}}</h1>
+    <form #myform="ngForm" (ngSubmit)="submit(myform.value)">
+        <div class="details">
+            <label for="username">{{user_label}}:</label><br>
+            <input type="text" name="username" id="" ngModel><br>
+        </div><br>
+        <div class="details">
+            <label for="password">{{password_label}}</label><br>
+            <input type="text" name="password" id="" ngModel><br>
+        </div><br>
+        <div class="details">
+            <button class="btn btn-success">Login</button>
+        </div>
+    </form>
+</div>
